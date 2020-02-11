@@ -1,1 +1,32 @@
 // Mixins Here
+
+//button mixins
+.base-button{
+    border-radius: @size;
+    display: inline-block;
+    font-size: @font-size;
+    color: black;
+}
+
+.button-style(@base, @hover){
+    .base-button;
+    background-color: @base;
+    padding-bottom: @size;
+    color: white;
+
+    .text{
+        .base-button;
+        padding: @size+4;
+        background-color: @hover;
+
+        &:hover{
+            position: relative;
+            top: -1px;
+        }
+    }
+}
+.box-spacing {
+    margin: 1%;
+    padding: 2%;
+    width: 30%;
+  }
